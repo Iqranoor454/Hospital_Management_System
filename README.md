@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+<h1>🏥 Hospital Management System (HMS)</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>A full-stack healthcare coordination platform designed to streamline interactions between <strong>Patients</strong>, <strong>Doctors</strong>, and <strong>Administrators</strong>. This system allows for secure authentication, patient registration, and real-time appointment tracking.</p>
 
-## Available Scripts
+<h2>🚀 Features</h2>
 
-In the project directory, you can run:
+<h3>👤 Patient Portal</h3>
+<ul>
+  <li><strong>Self-Registration:</strong> Patients can create an account via the Sign-Up form.</li>
+  <li><strong>Secure Login:</strong> Access to a personalized dashboard using email and phone verification.</li>
+  <li><strong>Appointment Management:</strong> Book appointments and view real-time status details.</li>
+  <li><strong>Medical Transparency:</strong> View assigned doctor details and personal medical history.</li>
+</ul>
 
-### `npm start`
+<h3>🩺 Doctor Portal</h3>
+<ul>
+  <li><strong>Patient Management:</strong> Ability to add new patients directly to the system.</li>
+  <li><strong>Schedule Overview:</strong> View all booked appointments and patient details for the day.</li>
+  <li><strong>Clinical Records:</strong> Access and update patient medical history and current medications.</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>🛡️ Admin Dashboard</h3>
+<ul>
+  <li><strong>System Oversight:</strong> Manage both doctor and patient databases.</li>
+  <li><strong>Role-Based Access:</strong> Add or update administrative accounts with specific permissions.</li>
+  <li><strong>Operational Control:</strong> Monitor all activity across the hospital system.</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<hr>
 
-### `npm test`
+<h2>🛠️ Tech Stack</h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Frontend:</h3>
+<ul>
+  <li><strong>React.js:</strong> Functional components with Hooks (<code>useState</code>, <code>useEffect</code>).</li>
+  <li><strong>React Router Dom:</strong> For seamless navigation between forms and dashboards.</li>
+  <li><strong>Axios:</strong> For handling API requests to the backend.</li>
+  <li><strong>Inline CSS:</strong> Modern, responsive UI with glassmorphism effects.</li>
+</ul>
 
-### `npm run build`
+<h3>Backend:</h3>
+<ul>
+  <li><strong>Node.js & Express:</strong> RESTful API architecture.</li>
+  <li><strong>Database:</strong> MongoDB </li>
+</ul>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<hr>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2>📂 Project Structure</h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<pre><code>
+hospital-management-system/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Add_patients.jsx    <!-- Doctor-side patient entry -->
+│   │   │   ├── Add_admin.jsx       <!-- Admin management form -->
+│   │   │   ├── Sign_up.jsx         <!-- Patient registration -->
+│   │   │   └── Login.jsx           <!-- Unified login portal -->
+│   │   └── App.js                  <!-- Routing logic -->
+├── backend/
+│   ├── server.js                   <!-- Express server setup -->
+│   └── routes/                    <!-- API endpoints (Add, Put, Get) -->
+└── README.md
+</code></pre>
 
-### `npm run eject`
+<hr>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2>⚙️ Installation & Setup</h2>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<ol>
+  <li><strong>Clone the repository:</strong>
+    <pre><code>git clone https://github.com/iqranoor4463/hospital-management-system.git</code></pre>
+  </li>
+  <li><strong>Install dependencies for backend and frontend:</strong>
+    <pre><code>cd backend
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+cd ../frontend
+npm install</code></pre>
+  </li>
+  <li><strong>Configure the Database:</strong>  
+    Create a <code>.env</code> file inside <code>backend/</code> with:
+    <pre><code>MONGO_URI=your_mongodb_connection_string
+PORT=5000
+    </code></pre>
+  </li>
+  <li><strong>Run the backend server:</strong>
+    <pre><code>cd backend
+npm start</code></pre>
+  </li>
+  <li><strong>Run the frontend server:</strong>
+    <pre><code>cd frontend
+npm start</code></pre>
+  </li>
+</ol>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<hr>
 
-## Learn More
+<h2>📝 API Endpoints</h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<table>
+  <thead>
+    <tr><th>Method</th><th>Endpoint</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>POST</td><td>/add_patient</td><td>Registers a new patient</td></tr>
+    <tr><td>PUT</td><td>/patient/:id</td><td>Updates existing patient data</td></tr>
+    <tr><td>POST</td><td>/add_admin</td><td>Creates a new admin account</td></tr>
+    <tr><td>PUT</td><td>/admin/:id</td><td>Updates admin permissions/roles</td></tr>
+    <tr><td>POST</td><td>/login</td><td>Authenticates users (Patient/Doctor/Admin)</td></tr>
+  </tbody>
+</table>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<hr>
 
-### Code Splitting
+<h2>🌐 Deployment</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p><strong>Frontend:</strong> Hosted on GitHub Pages or Vercel.</p>
+<p><strong>Backend:</strong> Hosted on Render or Railway.</p>
 
-### Analyzing the Bundle Size
+<p><em>Ensure API base URLs in frontend are updated to point to the deployed backend URL.</em></p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<hr>
 
-### Making a Progressive Web App
+<h2>🤝 Contributing</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p>Contributions are welcome! Please open issues or submit pull requests for improvements.</p>
 
-### Advanced Configuration
+<hr>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<h2>📧 Contact</h2>
 
-### Deployment
+<p>Developed by <strong>Your Name</strong> — <a href="mailto:your-email@example.com">your-email@example.com</a></p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<hr>
 
-### `npm run build` fails to minify
+<h2>📜 License</h2>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>This project is licensed under the MIT License.</p>
