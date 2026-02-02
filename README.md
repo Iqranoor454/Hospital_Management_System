@@ -70,7 +70,7 @@ hospital-management-system/
 
 <ol>
   <li><strong>Clone the repository:</strong>
-    <pre><code>git clone https://github.com/iqranoor4463/hospital-management-system.git</code></pre>
+    <pre><code>git clone https://github.com/iqranoor454/hospital-management-system.git</code></pre>
   </li>
   <li><strong>Install dependencies for backend and frontend:</strong>
     <pre><code>cd backend
