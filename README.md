@@ -70,7 +70,7 @@ hospital-management-system/
 
 <ol>
   <li><strong>Clone the repository:</strong>
-    <pre><code>git clone https://github.com/iqranoor454/hospital-management-system.git</code></pre>
+    <pre><code>git clone https://github.com/iqranoor454/Hospital-Management-System.git</code></pre>
   </li>
   <li><strong>Install dependencies for backend and frontend:</strong>
     <pre><code>cd backend
@@ -107,7 +107,6 @@ npm start</code></pre>
     <tr><td>PUT</td><td>/patient/:id</td><td>Updates existing patient data</td></tr>
     <tr><td>POST</td><td>/add_admin</td><td>Creates a new admin account</td></tr>
     <tr><td>PUT</td><td>/admin/:id</td><td>Updates admin permissions/roles</td></tr>
-    <tr><td>POST</td><td>/login</td><td>Authenticates users (Patient/Doctor/Admin)</td></tr>
   </tbody>
 </table>
 
