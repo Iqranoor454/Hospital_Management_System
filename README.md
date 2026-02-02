@@ -82,7 +82,6 @@ npm install</code></pre>
   <li><strong>Configure the Database:</strong>  
     Create a <code>.env</code> file inside <code>backend/</code> with:
     <pre><code>MONGO_URI=your_mongodb_connection_string
-PORT=5000
     </code></pre>
   </li>
   <li><strong>Run the backend server:</strong>
@@ -113,28 +112,3 @@ npm start</code></pre>
 </table>
 
 <hr>
-
-<h2>🌐 Deployment</h2>
-
-<p><strong>Frontend:</strong> Hosted on GitHub Pages or Vercel.</p>
-<p><strong>Backend:</strong> Hosted on Render or Railway.</p>
-
-<p><em>Ensure API base URLs in frontend are updated to point to the deployed backend URL.</em></p>
-
-<hr>
-
-<h2>🤝 Contributing</h2>
-
-<p>Contributions are welcome! Please open issues or submit pull requests for improvements.</p>
-
-<hr>
-
-<h2>📧 Contact</h2>
-
-<p>Developed by <strong>Your Name</strong> — <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-
-<hr>
-
-<h2>📜 License</h2>
-
-<p>This project is licensed under the MIT License.</p>
